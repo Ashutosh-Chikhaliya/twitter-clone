@@ -17,8 +17,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 //api
-app.use("api1/v1/user", userRoute);
+app.use("/api/v1/user", userRoute);
 
-app.listen(process.env.PORT, () => {
+http: app.listen(process.env.PORT, () => {
   console.log(`server listen at port ${process.env.PORT}`);
 });

@@ -21,10 +21,14 @@ const userSchema = new mongoose.Schema(
       required: true,
     },
     followers: {
-      types: Array,
+      type: Array,
       default: [],
     },
     following: {
+      type: Array,
+      default: [],
+    },
+    bookmarks: {
       type: Array,
       default: [],
     },

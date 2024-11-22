@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 const tweetSchema = new mongoose.Schema(
   {
@@ -10,18 +10,9 @@ const tweetSchema = new mongoose.Schema(
       type: Array,
       default: [],
     },
-
-    bookmarks: {
-      type: Array,
-      default: [],
-    },
     userId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
-    },
-    password: {
-      type: String,
-      required: true,
     },
   },
   { timestamps: true }
